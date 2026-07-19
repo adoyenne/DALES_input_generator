@@ -1,0 +1,1999 @@
+### HARMONIE tables ###
+#Absolute divergence
+'88253042' = {
+         discipline = 0 ;
+         parameterCategory = 2 ;
+         parameterNumber = 11 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Absolute vorticity
+'88253041' = {
+         discipline = 0 ;
+         parameterCategory = 2 ;
+         parameterNumber = 10 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Convective precipitation (water)
+'88253063' = {
+         discipline = 0 ;
+         parameterCategory = 1 ;
+         parameterNumber = 10 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Surface carbon aerosol
+'88253253' = {
+         discipline = 0 ;
+         parameterCategory = 13 ;
+         parameterNumber = 194 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Surface aerosol desert
+'88253254' = {
+         discipline = 0 ;
+         parameterCategory = 13 ;
+         parameterNumber = 195 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Surface aerosol land
+'88253252' = {
+         discipline = 0 ;
+         parameterCategory = 13 ;
+         parameterNumber = 193 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Surface aerosol sea
+'88253251' = {
+         discipline = 0 ;
+         parameterCategory = 13 ;
+         parameterNumber = 192 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Albedo
+'88253084' = {
+         discipline = 0 ;
+         parameterCategory = 19 ;
+         parameterNumber = 192 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Albedo of bare ground
+'88253229' = {
+         discipline = 0 ;
+         parameterCategory = 19 ;
+         parameterNumber = 195 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Albedo of vegetation
+'88253230' = {
+         discipline = 0 ;
+         parameterCategory = 19 ;
+         parameterNumber = 196 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#A Ozone
+'88253248' = {
+         discipline = 0 ;
+         parameterCategory = 14 ;
+         parameterNumber = 192 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Analysed RMS of PHI (CANARI)
+'88253128' = {
+         discipline = 0 ;
+         parameterCategory = 0 ;
+         parameterNumber = 50 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Anisotropy coeff of topography
+'88253221' = {
+         discipline = 0 ;
+         parameterCategory = 3 ;
+         parameterNumber = 192 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Boundary layer dissipation
+'88253123' = {
+         discipline = 0 ;
+         parameterCategory = 2 ;
+         parameterNumber = 20 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Best lifted index (to 500 hPa)
+'88253077' = {
+         discipline = 0 ;
+         parameterCategory = 7 ;
+         parameterNumber = 1 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Bottom level of icing
+'88253146' = {
+         discipline = 0 ;
+         parameterCategory = 19 ;
+         parameterNumber = 6 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#B Ozone
+'88253249' = {
+         discipline = 0 ;
+         parameterCategory = 14 ;
+         parameterNumber = 193 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Brunt Vaisala frequency
+'88253159' = {
+         discipline = 0 ;
+         parameterCategory = 19 ;
+         parameterNumber = 202 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Convective Available Potential Energy
+'88253160' = {
+         discipline = 0 ;
+         parameterCategory = 7 ;
+         parameterNumber = 6 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#CAT index
+'88253145' = {
+         discipline = 0 ;
+         parameterCategory = 19 ;
+         parameterNumber = 22 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Bottom level of CAT
+'88253152' = {
+         discipline = 0 ;
+         parameterCategory = 19 ;
+         parameterNumber = 198 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Max CAT index
+'88253151' = {
+         discipline = 0 ;
+         parameterCategory = 19 ;
+         parameterNumber = 197 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Level of max CAT index
+'88253150' = {
+         discipline = 0 ;
+         parameterCategory = 19 ;
+         parameterNumber = 201 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Top level of CAT
+'88253153' = {
+         discipline = 0 ;
+         parameterCategory = 19 ;
+         parameterNumber = 199 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Cloud base
+'88253186' = {
+         discipline = 0 ;
+         parameterCategory = 6 ;
+         parameterNumber = 11 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Cloud base >3/8
+'88253189' = {
+         discipline = 0 ;
+         parameterCategory = 6 ;
+         parameterNumber = 198 ;
+         level = 3 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Convective cloud cover
+'88253072' = {
+         discipline = 0 ;
+         parameterCategory = 6 ;
+         parameterNumber = 193 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Convective inhibition
+'88253165' = {
+         discipline = 0 ;
+         parameterCategory = 7 ;
+         parameterNumber = 7 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Cloud ice water content
+'882530580' = {
+         discipline = 0 ;
+         parameterCategory = 6 ;
+         parameterNumber = 0 ;
+         level = 0 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Specific cloud ice water content
+'882530581' = {
+         discipline = 0 ;
+         parameterCategory = 1 ;
+         parameterNumber = 84 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Fraction of clay within soil
+'88253225' = {
+         discipline = 2 ;
+         parameterCategory = 3 ;
+         parameterNumber = 192 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#C Ozone
+'88253250' = {
+         discipline = 0 ;
+         parameterCategory = 14 ;
+         parameterNumber = 194 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Convective rain
+'88253183' = {
+         discipline = 0 ;
+         parameterCategory = 1 ;
+         parameterNumber = 37 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Convective snowfall
+'88253078' = {
+         discipline = 0 ;
+         parameterCategory = 1 ;
+         parameterNumber = 55 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#LW net clear sky rad
+'88253131' = {
+         discipline = 0 ;
+         parameterCategory = 5 ;
+         parameterNumber = 6 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#SW net clear sky rad
+'88253130' = {
+         discipline = 0 ;
+         parameterCategory = 4 ;
+         parameterNumber = 11 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Cloud top
+'88253187' = {
+         discipline = 0 ;
+         parameterCategory = 6 ;
+         parameterNumber = 12 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Specific cloud liquid water content
+'88253076' = {
+         discipline = 0 ;
+         parameterCategory = 1 ;
+         parameterNumber = 83 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Relative divergence
+'88253044' = {
+         discipline = 0 ;
+         parameterCategory = 2 ;
+         parameterNumber = 13 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Density
+'88253089' = {
+         discipline = 0 ;
+         parameterCategory = 3 ;
+         parameterNumber = 10 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Dew point depression (or deficit)
+'88253018' = {
+         discipline = 0 ;
+         parameterCategory = 0 ;
+         parameterNumber = 7 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Direct normal exposure
+'88253140' = {
+         discipline = 3 ;
+         parameterCategory = 6 ;
+         parameterNumber = 3 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Deviation of sea-level from mean
+'88253082' = {
+         discipline = 10 ;
+         parameterCategory = 3 ;
+         parameterNumber = 1 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Direction of main axis of topography
+'88253222' = {
+         discipline = 0 ;
+         parameterCategory = 3 ;
+         parameterNumber = 193 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Duration of total precipitation
+'88253243' = {
+         discipline = 0 ;
+         parameterCategory = 1 ;
+         parameterNumber = 201 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Dominant vegetation index
+'88253234' = {
+         discipline = 2 ;
+         parameterCategory = 0 ;
+         parameterNumber = 31 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Gust wind speed
+'88253228' = {
+         discipline = 0 ;
+         parameterCategory = 2 ;
+         parameterNumber = 22 ;
+         typeOfStatisticalProcessing = 2 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Geopotential height
+'88253007' = {
+         discipline = 0 ;
+         parameterCategory = 3 ;
+         parameterNumber = 5 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Geopotential height anomaly
+'88253027' = {
+         discipline = 0 ;
+         parameterCategory = 3 ;
+         parameterNumber = 9 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Global radiation flux
+'88253117' = {
+         discipline = 0 ;
+         parameterCategory = 4 ;
+         parameterNumber = 3 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Graupel precipitation rate
+'882532010' = {
+         discipline = 0 ;
+         parameterCategory = 1 ;
+         parameterNumber = 75 ;
+         level = 0 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Specific graupel
+'882532011' = {
+         discipline = 0 ;
+         parameterCategory = 1 ;
+         parameterNumber = 32 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Convective Graupel
+'88253203' = {
+         discipline = 0 ;
+         parameterCategory = 1 ;
+         parameterNumber = 196 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Stratiform Graupel
+'88253202' = {
+         discipline = 0 ;
+         parameterCategory = 1 ;
+         parameterNumber = 195 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Gravity wave stress U-comp
+'88253195' = {
+         discipline = 0 ;
+         parameterCategory = 3 ;
+         parameterNumber = 16 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Gravity wave stress V-comp
+'88253196' = {
+         discipline = 0 ;
+         parameterCategory = 3 ;
+         parameterNumber = 17 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Geometrical height
+'88253008' = {
+         discipline = 0 ;
+         parameterCategory = 3 ;
+         parameterNumber = 6 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Hail precipitation rate
+'88253204' = {
+         discipline = 0 ;
+         parameterCategory = 1 ;
+         parameterNumber = 73 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Convective Hail
+'88253206' = {
+         discipline = 0 ;
+         parameterCategory = 1 ;
+         parameterNumber = 198 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Stratiform Hail
+'88253205' = {
+         discipline = 0 ;
+         parameterCategory = 1 ;
+         parameterNumber = 197 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#High cloud cover
+'88253075' = {
+         discipline = 0 ;
+         parameterCategory = 6 ;
+         parameterNumber = 196 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Standard deviation of height
+'88253009' = {
+         discipline = 0 ;
+         parameterCategory = 3 ;
+         parameterNumber = 7 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Helicopter Triggered ligthning Index
+'88253148' = {
+         discipline = 0 ;
+         parameterCategory = 17 ;
+         parameterNumber = 193 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#ICAO Standard Atmosphere reference height
+'88253005' = {
+         discipline = 0 ;
+         parameterCategory = 3 ;
+         parameterNumber = 3 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Ice cover (1=land, 0=sea)
+'88253091' = {
+         discipline = 10 ;
+         parameterCategory = 2 ;
+         parameterNumber = 0 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Ice divergence
+'88253098' = {
+         discipline = 10 ;
+         parameterCategory = 2 ;
+         parameterNumber = 7 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Ice growth rate
+'88253097' = {
+         discipline = 10 ;
+         parameterCategory = 2 ;
+         parameterNumber = 6 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Icing index version 2
+'88253134' = {
+         discipline = 0 ;
+         parameterCategory = 1 ;
+         parameterNumber = 194 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Ice thickness
+'88253092' = {
+         discipline = 10 ;
+         parameterCategory = 2 ;
+         parameterNumber = 1 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Leaf area index
+'88253232' = {
+         discipline = 2 ;
+         parameterCategory = 0 ;
+         parameterNumber = 28 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Lapse rate
+'88253019' = {
+         discipline = 0 ;
+         parameterCategory = 0 ;
+         parameterNumber = 8 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Low cloud cover
+'88253073' = {
+         discipline = 0 ;
+         parameterCategory = 6 ;
+         parameterNumber = 194 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Lifting condensation level
+'88253167' = {
+         discipline = 0 ;
+         parameterCategory = 3 ;
+         parameterNumber = 6 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Level of free convection
+'88253168' = {
+         discipline = 0 ;
+         parameterCategory = 3 ;
+         parameterNumber = 6 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Lightning
+'88253209' = {
+         discipline = 0 ;
+         parameterCategory = 17 ;
+         parameterNumber = 192 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Latent heat flux through evaporation
+'88253132' = {
+         discipline = 0 ;
+         parameterCategory = 1 ;
+         parameterNumber = 193 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Latent heat flux
+'88253121' = {
+         discipline = 0 ;
+         parameterCategory = 0 ;
+         parameterNumber = 10 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Latent Heat Sublimation
+'88253244' = {
+         discipline = 0 ;
+         parameterCategory = 1 ;
+         parameterNumber = 202 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Level of max icing
+'88253143' = {
+         discipline = 0 ;
+         parameterCategory = 1 ;
+         parameterNumber = 199 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Level of max wind speed
+'88253142' = {
+         discipline = 0 ;
+         parameterCategory = 3 ;
+         parameterNumber = 6 ;
+         typeOfFirstFixedSurface = 6 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Level of neutral buoyancy
+'88253169' = {
+         discipline = 0 ;
+         parameterCategory = 3 ;
+         parameterNumber = 6 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Large scale snowfall
+'88253079' = {
+         discipline = 0 ;
+         parameterCategory = 1 ;
+         parameterNumber = 56 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Land-sea mask
+'88253081' = {
+         discipline = 2 ;
+         parameterCategory = 0 ;
+         parameterNumber = 0 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Large scale precipitation (water)
+'88253062' = {
+         discipline = 0 ;
+         parameterCategory = 1 ;
+         parameterNumber = 9 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Longwave radiation flux
+'88253115' = {
+         discipline = 0 ;
+         parameterCategory = 5 ;
+         parameterNumber = 4 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Max u-component in column
+'88253164' = {
+         discipline = 0 ;
+         parameterCategory = 2 ;
+         parameterNumber = 2 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Max v-component in column
+'88253177' = {
+         discipline = 0 ;
+         parameterCategory = 2 ;
+         parameterNumber = 3 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Medium cloud cover
+'88253074' = {
+         discipline = 0 ;
+         parameterCategory = 6 ;
+         parameterNumber = 195 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#MOCON out of the model
+'88253166' = {
+         discipline = 0 ;
+         parameterCategory = 1 ;
+         parameterNumber = 26 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Humidity mixing ratio
+'88253053' = {
+         discipline = 0 ;
+         parameterCategory = 1 ;
+         parameterNumber = 2 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Mixed layer depth
+'88253067' = {
+         discipline = 0 ;
+         parameterCategory = 19 ;
+         parameterNumber = 3 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Montgomery stream Function
+'88253037' = {
+         discipline = 0 ;
+         parameterCategory = 2 ;
+         parameterNumber = 6 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Surface downward moon radiation
+'88253158' = {
+         discipline = 0 ;
+         parameterCategory = 4 ;
+         parameterNumber = 197 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Mask of significant cloud amount
+'88253133' = {
+         discipline = 0 ;
+         parameterCategory = 6 ;
+         parameterNumber = 197 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Pressure reduced to mean sea level
+'88253002' = {
+         discipline = 0 ;
+         parameterCategory = 3 ;
+         parameterNumber = 1 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Main thermocline anomaly
+'88253070' = {
+         discipline = 10 ;
+         parameterCategory = 4 ;
+         parameterNumber = 1 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Main thermocline depth
+'88253069' = {
+         discipline = 10 ;
+         parameterCategory = 4 ;
+         parameterNumber = 0 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Max icing growth index
+'88253141' = {
+         discipline = 0 ;
+         parameterCategory = 1 ;
+         parameterNumber = 204 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Net longwave radiation flux (surface)
+'88253112' = {
+         discipline = 0 ;
+         parameterCategory = 5 ;
+         parameterNumber = 5 ;
+         level = 0 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Net longwave radiation flux(atmosph.top)
+'88253114' = {
+         discipline = 0 ;
+         parameterCategory = 5 ;
+         parameterNumber = 5 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Net shortwave radiation flux (surface)
+'88253111' = {
+         discipline = 0 ;
+         parameterCategory = 4 ;
+         parameterNumber = 9 ;
+         level = 0 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Net shortwave radiation flux(atmosph.top)
+'88253113' = {
+         discipline = 0 ;
+         parameterCategory = 4 ;
+         parameterNumber = 9 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Pressure vertical velocity
+'88253039' = {
+         discipline = 0 ;
+         parameterCategory = 2 ;
+         parameterNumber = 8 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Pseudo-adiabatic potential temperature
+'88253014' = {
+         discipline = 0 ;
+         parameterCategory = 0 ;
+         parameterNumber = 3 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Pressure departure
+'88253212' = {
+         discipline = 0 ;
+         parameterCategory = 3 ;
+         parameterNumber = 8 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Parcel lifted index (to 500 hPa)
+'88253024' = {
+         discipline = 0 ;
+         parameterCategory = 7 ;
+         parameterNumber = 0 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Precipitation rate
+'88253059' = {
+         discipline = 0 ;
+         parameterCategory = 1 ;
+         parameterNumber = 7 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Pressure
+'88253001' = {
+         discipline = 0 ;
+         parameterCategory = 3 ;
+         parameterNumber = 0 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Precipitation Type
+'88253144' = {
+         discipline = 0 ;
+         parameterCategory = 1 ;
+         parameterNumber = 19 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Pseudo satellite image: cloud top temperature (infrared)
+'88253136' = {
+         discipline = 0 ;
+         parameterCategory = 4 ;
+         parameterNumber = 0 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Pseudo satellite image: cloud water reflectivity (visible)
+'88253139' = {
+         discipline = 0 ;
+         parameterCategory = 4 ;
+         parameterNumber = 200 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Pseudo satellite image: water vapour Tb
+'88253137' = {
+         discipline = 0 ;
+         parameterCategory = 4 ;
+         parameterNumber = 198 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Pseudo satellite image: water vapour Tb + correction for clouds
+'88253138' = {
+         discipline = 0 ;
+         parameterCategory = 4 ;
+         parameterNumber = 199 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Potential temperature
+'88253013' = {
+         discipline = 0 ;
+         parameterCategory = 0 ;
+         parameterNumber = 2 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Pressure tendency
+'88253003' = {
+         discipline = 0 ;
+         parameterCategory = 3 ;
+         parameterNumber = 2 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Potential vorticity
+'88253004' = {
+         discipline = 0 ;
+         parameterCategory = 2 ;
+         parameterNumber = 14 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Specific humidity
+'88253051' = {
+         discipline = 0 ;
+         parameterCategory = 1 ;
+         parameterNumber = 0 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Relative humidity
+'88253052' = {
+         discipline = 0 ;
+         parameterCategory = 1 ;
+         parameterNumber = 192 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Rain
+'882531810' = {
+         discipline = 0 ;
+         parameterCategory = 1 ;
+         parameterNumber = 65 ;
+         level = 0 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Specific rain water content
+'882531811' = {
+         discipline = 0 ;
+         parameterCategory = 1 ;
+         parameterNumber = 85 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Radar spectra (1)
+'88253021' = {
+         discipline = 0 ;
+         parameterCategory = 15 ;
+         parameterNumber = 6 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Radar spectra (2)
+'88253022' = {
+         discipline = 0 ;
+         parameterCategory = 15 ;
+         parameterNumber = 7 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Radar spectra (3)
+'88253023' = {
+         discipline = 0 ;
+         parameterCategory = 15 ;
+         parameterNumber = 8 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Simulated reflectivity
+'88253210' = {
+         discipline = 0 ;
+         parameterCategory = 16 ;
+         parameterNumber = 192 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Resistance to evapotranspiration
+'88253240' = {
+         discipline = 2 ;
+         parameterCategory = 0 ;
+         parameterNumber = 192 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Minimum relative moisture at 2 meters
+'88253241' = {
+         discipline = 0 ;
+         parameterCategory = 1 ;
+         parameterNumber = 1 ;
+         level = 2 ;
+         typeOfStatisticalProcessing = 3 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Maximum relative moisture at 2 meters
+'88253242' = {
+         discipline = 0 ;
+         parameterCategory = 1 ;
+         parameterNumber = 1 ;
+         level = 2 ;
+         typeOfStatisticalProcessing = 2 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Snow density
+'88253191' = {
+         discipline = 0 ;
+         parameterCategory = 1 ;
+         parameterNumber = 61 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Salinity
+'88253088' = {
+         discipline = 10 ;
+         parameterCategory = 4 ;
+         parameterNumber = 3 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Saturation deficit
+'88253056' = {
+         discipline = 0 ;
+         parameterCategory = 1 ;
+         parameterNumber = 5 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Snow depth water equivalent
+'88253065' = {
+         discipline = 0 ;
+         parameterCategory = 1 ;
+         parameterNumber = 60 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Surface emissivity
+'88253235' = {
+         discipline = 0 ;
+         parameterCategory = 19 ;
+         parameterNumber = 200 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Sigma coordinate vertical velocity
+'88253038' = {
+         discipline = 0 ;
+         parameterCategory = 2 ;
+         parameterNumber = 7 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Sensible heat flux
+'88253122' = {
+         discipline = 0 ;
+         parameterCategory = 0 ;
+         parameterNumber = 11 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Soil depth
+'88253237' = {
+         discipline = 2 ;
+         parameterCategory = 3 ;
+         parameterNumber = 27 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Fraction of sand within soil
+'88253226' = {
+         discipline = 2 ;
+         parameterCategory = 3 ;
+         parameterNumber = 193 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Soil Temperature
+'88253085' = {
+         discipline = 2 ;
+         parameterCategory = 3 ;
+         parameterNumber = 18 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Soil Moisture
+'88253086' = {
+         discipline = 2 ;
+         parameterCategory = 3 ;
+         parameterNumber = 20 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Stomata minimum resistance
+'88253231' = {
+         discipline = 2 ;
+         parameterCategory = 0 ;
+         parameterNumber = 16 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Snow melt
+'88253099' = {
+         discipline = 0 ;
+         parameterCategory = 1 ;
+         parameterNumber = 16 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Total snowfall rate water equivalent
+'882531840' = {
+         discipline = 0 ;
+         parameterCategory = 1 ;
+         parameterNumber = 53 ;
+         level = 0 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Specific snow water content
+'882531841' = {
+         discipline = 0 ;
+         parameterCategory = 1 ;
+         parameterNumber = 86 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Snow sublimation
+'88253246' = {
+         discipline = 0 ;
+         parameterCategory = 1 ;
+         parameterNumber = 62 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Speed of current
+'88253048' = {
+         discipline = 10 ;
+         parameterCategory = 1 ;
+         parameterNumber = 1 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Stratiform rain
+'88253182' = {
+         discipline = 0 ;
+         parameterCategory = 1 ;
+         parameterNumber = 54 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Surface roughness * g
+'88253083' = {
+         discipline = 2 ;
+         parameterCategory = 0 ;
+         parameterNumber = 196 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Snow fall rate water equivalent
+'88253064' = {
+         discipline = 0 ;
+         parameterCategory = 1 ;
+         parameterNumber = 12 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Stream function
+'88253035' = {
+         discipline = 0 ;
+         parameterCategory = 2 ;
+         parameterNumber = 4 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Shortwave radiation flux
+'88253116' = {
+         discipline = 0 ;
+         parameterCategory = 4 ;
+         parameterNumber = 7 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Radiance (with respect to wave length)
+'88253120' = {
+         discipline = 0 ;
+         parameterCategory = 4 ;
+         parameterNumber = 6 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Soil Wetness
+'88253238' = {
+         discipline = 2 ;
+         parameterCategory = 3 ;
+         parameterNumber = 25 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Temperature
+'88253011' = {
+         discipline = 0 ;
+         parameterCategory = 0 ;
+         parameterNumber = 0 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Temperature anomaly
+'88253025' = {
+         discipline = 0 ;
+         parameterCategory = 0 ;
+         parameterNumber = 9 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Total cloud cover
+'88253071' = {
+         discipline = 0 ;
+         parameterCategory = 6 ;
+         parameterNumber = 192 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Total column ozone
+'88253010' = {
+         discipline = 0 ;
+         parameterCategory = 14 ;
+         parameterNumber = 0 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Dew point temperature
+'88253017' = {
+         discipline = 0 ;
+         parameterCategory = 0 ;
+         parameterNumber = 6 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Turbulent Kinetic Energy
+'88001200' = {
+         discipline = 0 ;
+         parameterCategory = 19 ;
+         parameterNumber = 11 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Top level of icing
+'88253147' = {
+         discipline = 0 ;
+         parameterCategory = 19 ;
+         parameterNumber = 5 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Maximum temperature
+'88253015' = {
+         discipline = 0 ;
+         parameterCategory = 0 ;
+         parameterNumber = 0 ;
+         typeOfStatisticalProcessing = 2 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Minimum temperature
+'88253016' = {
+         discipline = 0 ;
+         parameterCategory = 0 ;
+         parameterNumber = 0 ;
+         typeOfStatisticalProcessing = 3 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Total precipitation
+'88253061' = {
+         discipline = 0 ;
+         parameterCategory = 1 ;
+         parameterNumber = 8 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Total solid precipitation
+'88253185' = {
+         discipline = 0 ;
+         parameterCategory = 1 ;
+         parameterNumber = 200 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Thunderstorm probability
+'88253060' = {
+         discipline = 0 ;
+         parameterCategory = 19 ;
+         parameterNumber = 2 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Transient thermocline depth
+'88253068' = {
+         discipline = 10 ;
+         parameterCategory = 4 ;
+         parameterNumber = 2 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#u-component of wind
+'88253033' = {
+         discipline = 0 ;
+         parameterCategory = 2 ;
+         parameterNumber = 2 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Momentum flux, u-component
+'88253124' = {
+         discipline = 0 ;
+         parameterCategory = 2 ;
+         parameterNumber = 198 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Gust, u-component
+'88253162' = {
+         discipline = 0 ;
+         parameterCategory = 2 ;
+         parameterNumber = 23 ;
+         typeOfStatisticalProcessing = 2 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#v-component of wind
+'88253034' = {
+         discipline = 0 ;
+         parameterCategory = 2 ;
+         parameterNumber = 3 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Vertical Divergence
+'88253213' = {
+         discipline = 0 ;
+         parameterCategory = 2 ;
+         parameterNumber = 192 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Vegetation fraction
+'88253087' = {
+         discipline = 2 ;
+         parameterCategory = 0 ;
+         parameterNumber = 197 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Maximum proportion of vegetation
+'88253227' = {
+         discipline = 2 ;
+         parameterCategory = 0 ;
+         parameterNumber = 195 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Momentum flux, v-component
+'88253125' = {
+         discipline = 0 ;
+         parameterCategory = 2 ;
+         parameterNumber = 199 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Gust, v-component
+'88253163' = {
+         discipline = 0 ;
+         parameterCategory = 2 ;
+         parameterNumber = 24 ;
+         typeOfStatisticalProcessing = 2 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Visibility
+'88253020' = {
+         discipline = 0 ;
+         parameterCategory = 19 ;
+         parameterNumber = 0 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Relative vorticity
+'88253043' = {
+         discipline = 0 ;
+         parameterCategory = 2 ;
+         parameterNumber = 12 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Velocity potential
+'88253036' = {
+         discipline = 0 ;
+         parameterCategory = 1 ;
+         parameterNumber = 4 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Virtual potential temperature
+'88253176' = {
+         discipline = 0 ;
+         parameterCategory = 0 ;
+         parameterNumber = 15 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Virtual temperature
+'88253012' = {
+         discipline = 0 ;
+         parameterCategory = 0 ;
+         parameterNumber = 1 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Vertical u-component shear
+'88253045' = {
+         discipline = 0 ;
+         parameterCategory = 2 ;
+         parameterNumber = 15 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Vertical v-component shear
+'88253046' = {
+         discipline = 0 ;
+         parameterCategory = 2 ;
+         parameterNumber = 16 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Geometrical vertical velocity
+'88253040' = {
+         discipline = 0 ;
+         parameterCategory = 2 ;
+         parameterNumber = 9 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Water on canopy (Interception content)
+'88253192' = {
+         discipline = 2 ;
+         parameterCategory = 3 ;
+         parameterNumber = 194 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Deep soil ice
+'88253193' = {
+         discipline = 2 ;
+         parameterCategory = 3 ;
+         parameterNumber = 22 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Wind direction
+'88253031' = {
+         discipline = 0 ;
+         parameterCategory = 2 ;
+         parameterNumber = 0 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Water evaporation
+'88253245' = {
+         discipline = 0 ;
+         parameterCategory = 1 ;
+         parameterNumber = 6 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Wind mixing energy
+'88253126' = {
+         discipline = 0 ;
+         parameterCategory = 2 ;
+         parameterNumber = 19 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Wind speed
+'88253032' = {
+         discipline = 0 ;
+         parameterCategory = 2 ;
+         parameterNumber = 1 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Max Wind speed
+'88253032' = {
+         discipline = 0 ;
+         parameterCategory = 2 ;
+         parameterNumber = 1 ;
+         typeOfStatisticalProcessing = 2 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Water temperature
+'88253080' = {
+         discipline = 10 ;
+         parameterCategory = 3 ;
+         parameterNumber = 0 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Total column integral water vapour
+'88253054' = {
+         discipline = 0 ;
+         parameterCategory = 1 ;
+         parameterNumber = 64 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Wave spectra (1)
+'88253028' = {
+         discipline = 10 ;
+         parameterCategory = 0 ;
+         parameterNumber = 0 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Wave spectra (2)
+'88253029' = {
+         discipline = 10 ;
+         parameterCategory = 0 ;
+         parameterNumber = 1 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Wave spectra (3)
+'88253030' = {
+         discipline = 10 ;
+         parameterCategory = 0 ;
+         parameterNumber = 2 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#AROME hail diagnostic
+'88253161' = {
+         discipline = 0 ;
+         parameterCategory = 1 ;
+         parameterNumber = 203 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Geopotential
+'88253006' = {
+         discipline = 0 ;
+         parameterCategory = 3 ;
+         parameterNumber = 4 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Roughness length of bare surface * g
+'88253223' = {
+         discipline = 2 ;
+         parameterCategory = 0 ;
+         parameterNumber = 193 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Roughness length for vegetation * g
+'88253224' = {
+         discipline = 2 ;
+         parameterCategory = 0 ;
+         parameterNumber = 194 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }
+#Thermal roughness length * g
+'88253239' = {
+         discipline = 2 ;
+         parameterCategory = 0 ;
+         parameterNumber = 216 ;
+         centre = 88 ;
+         editionNumber = 2 ;
+         interpretationOfNumberOfPoints = 0 ;
+         subCentre = 255 ;
+        }

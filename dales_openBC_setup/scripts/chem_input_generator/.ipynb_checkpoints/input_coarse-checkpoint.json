@@ -1,0 +1,54 @@
+{ "author": "Arseni Doyennel",
+  "coarse": {
+     "source": "harmonie_rd",
+     "inpath": "/scratch-shared/adoyenne/test_nc_to_grib/RD/",
+     "outpath":"/Users/darseni/Documents/work/test_interp_LE/",
+     "start":"2022-08-23T00:00",
+     "time0":"2022-08-23T00:00",
+     "end":  "2022-08-23T03:00",
+     "iexpnr": 1,
+     "lat_sw": 51.5,
+     "lon_sw": 3,
+     "e12": 0.01,
+     "nsv": 10,
+     "nprocx": 32,
+     "nprocy": 16,
+     "tchunk": 1,
+     "grid": {
+      "xsize": 204800,
+      "ysize": 102400,
+      "itot": 1024,
+      "jtot": 512,
+      "kmax": 128,
+      "dz0": 20,
+      "alpha": 0.012,
+      "x_offset": 90600,
+      "y_offset": 33400,
+      "xsize_fine": 79960,
+      "ysize_fine": 426325
+      },
+      "_tskin": { 
+      "ERA5_path": "/gpfs/home6/adoyenne/New_input_DALES/dales_openBC_setup/scripts/land_surface/erav5/"
+      },
+      "data_path": "/projects/0/nwo21036/spatial_data/",
+      "LSM":{
+	  "ERA5_path": "/gpfs/home6/adoyenne/New_input_DALES/dales_openBC_setup/scripts/land_surface/erav5/",
+	  "spatial_data_path": "/projects/0/nwo21036/spatial_data/",
+	  "lsm_kind" : "TNO"
+      },
+     "Nc_0": {
+      "Nc_cst": 130e6,
+      "z_cst": 4e3,
+      "z_e":  2e3
+     },
+     "synturb": {
+      "dx": 204800,
+      "dy": 102400
+      },
+     "filter": {
+      "time_start": "2022-08-22T18:00", 
+      "time_end": "2022-08-22T20:00",
+      "sigma": 20e3
+     }
+   }
+}

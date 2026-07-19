@@ -1,0 +1,257 @@
+&run
+    iexpnr = 1
+    lwarmstart = .false.
+    startfile = 'initd_latest_x000y000.001'
+    runtime = 43200
+    trestart = 3600
+    ladaptive = .true.
+    irandom = 1
+    randthl = 0.1
+    randqt = 2.5e-05
+    randu = 0.0
+    loutdirs = .true.
+    nsv = 24
+    nprocx = 32
+    nprocy = 16
+/
+
+&domain
+    itot = 512
+    jtot = 512
+    kmax = 128
+    xsize = 12800
+    ysize = 12800
+    kmax_soil = 4
+    xlat = 51.87
+    xlon = 4.3
+    xtime = 0
+    xday = 235
+    xyear = 2022
+/
+
+&physics
+    lcoriol = .true.
+    lrigidlid = .true.
+    igrw_damp = 0
+    iradiation = 4
+    timerad = 60
+/
+
+&namsurface
+    wtsurf = 0.0
+    wqsurf = 0.0
+    isurf = 11
+    z0  =  1.6e-4
+    ustin  =  0.32
+    ps  =  101540.00
+    thls  =  298.5
+    z0mav =  1.6e-4
+    z0hav =  3.2e-5
+    albedoav = 0.17
+/
+
+&namlsm
+    lheterogeneous = .true.
+    lfreedrainage = .true.
+    lags = .false.
+    dz_soil = 1.89, 0.72, 0.21, 0.07
+    iinterp_t = 3
+    iinterp_theta = 4
+    nlu = 10
+/
+
+&NAMDEPOSITION
+    LDRYDEP = .false.
+    NH3_AVG = -1.0
+    SO2_AVG = -1.0
+/
+
+&dynamics
+    llsadv = .false.
+    cu = 0.0
+    cv = 0.0
+    iadv_mom = 5
+    iadv_tke = 5
+    iadv_thl = 5
+    iadv_qt = 5
+    iadv_sv = 7
+/
+
+&nammicrophysics
+    imicro = 2
+    l_sb = .true.
+    nc_0 = 300000000.0
+/
+
+&namradiation
+    lcnstalbedo = .true.
+    iyear=2022
+/
+
+&namradstat
+    lstat = .true.
+    dtav = 60
+    timeav = 60
+/
+
+&namsubgrid
+    ldelta = .false.
+    lanisotrop = .false.
+    lD80R = .true.
+/
+
+&namnetcdfstats
+    lnetcdf = .true.
+/
+
+&nambudget
+    lbudget = .false.
+    dtav = 60.0
+    timeav = 60.0
+/
+
+&namchecksim
+    tcheck = 0
+/
+
+&namsampling
+    dtav = 60.0
+    timeav = 60.0
+    lsampcl = .false.
+    lsampco = .false.
+    lsampup = .false.
+    lsampbuup = .false.
+/
+
+&namtimestat
+    ltimestat = .true.
+    dtav = 60
+/
+
+&namcrosssection
+    lcross = .true.
+    dtav = 60
+    crossheight = 1, 128
+    crossplane =
+    crossortho =
+/
+
+&namgenstat
+    lstat = .true.
+    dtav = 60
+    timeav = 60
+/
+
+&namtimestat
+    ltimestat = .true.
+    dtav = 60.0
+/
+
+&namfielddump
+    lfielddump = .true.
+    dtav = 1800
+    ldiracc = .true.
+    lu = .true.
+    lv = .true.
+    lw = .true.
+    lqt = .false.
+    lbuoy = .false.
+    lhus = .false.
+    lta = .true.
+    lql = .false.
+    lsv = .true., .true., .true., .true.
+    lthl = .true.
+/
+
+&namcape
+    lcape = .true.
+    dtav = 1800
+/
+
+&namlsmcrosssection
+    lcross = .true.
+    dtav = 1800
+    crossheight = 1
+/
+
+&namstattend
+    dtav = 60
+    ltend = .false.
+/
+
+&namradfield
+    lradfield = .true.
+    dtav = 1800
+/
+
+&namtracers
+    ltracers = .true.
+/
+
+
+&namnudge
+    lnudge = .false.
+    tnudgefac = 10800
+/
+
+&namnudgeboundary
+    lnudge_boundary = .false.
+    lnudge_boundary_sv = .false.
+    lperturb_boundary = .false.
+    nudge_offset = 2500
+    nudge_width = 600
+    nudge_radius = 3000
+    nudge_tau = 5
+    perturb_offset = 5000
+    perturb_width = 600
+    perturb_radius = 4000
+    perturb_zmax = 500
+    perturb_blocksize = 2
+    perturb_ampl = 0.1
+    dt_input_lbc = 3600
+    dt_input_lbc_sv = 21600
+/
+
+&NAMDATETIME
+    l_datetime = .true.
+    startyear = 2022
+    startmonth = 08
+    startday = 23
+    starthour = 0
+    timezone   = 2         !Netherlands is GMT+2 in summer and GMT+1 in winter
+/
+
+&namemission
+    l_emission = .true.
+    l_points = .false.
+    explicit_plume_rise = .false.
+    kemis = 5
+    nemis = 1
+    emisnames(1) = 'co2   '
+
+&solver
+    solver_id = 100
+/
+
+&openbc
+    lopenbc = .true.
+    linithetero = .true.
+    lper = .false., .false.
+    dxint = 100
+    dyint = 100
+    dxturb = 12800
+    dyturb = 12800
+    lbuoytop = .true.
+    taum = 0.0
+    tauh = 20.0
+    pbc = 3
+    lsynturb = .false.
+    iturb = 1
+    lambda = 1875.0
+    lambdas_x = 1875.0
+    lambdas_y = 1875.0
+    lambdas_z = 240.0
+    tau = 180.0
+    nmodes = 20
+/
+

@@ -1,0 +1,58 @@
+{ 
+  "author": "Arseni Doyennel",
+  "fine": {
+    "inpath": "/scratch-shared/adoyenne/Final_August_23_2022_open_coarse_aerosol/",
+    "inpath_coarse": "/scratch-shared/adoyenne/Final_August_23_2022_open_coarse_aerosol/",
+    "outpath_coarse": "/scratch-shared/adoyenne/Final_August_23_2022_open_coarse_aerosol/",
+    "outpath_coarse_old": "/scratch-shared/adoyenne/Final_August_23_2022_open_coarse_aerosol/", 
+    "outpath":"/scratch-shared/adoyenne/New_August_23_2022_open_fine_aerosol/",
+    "start":"2022-08-23T00:00",
+    "time0":"2022-08-23T00:00",
+    "end":  "2022-08-24T00:00",
+    "nsv": 10,
+    "iexpnr": 1,
+    "x_fine": 79960.0,
+    "y_fine": 426325.0,
+    "x_offset": 90600.0,
+    "y_offset": 33400.0,
+    "dx_coarse": 200,
+    "dy_coarse": 200,
+    "nprocx_coarse":32,
+    "nprocy_coarse":16,
+    "nprocx":16,
+    "nprocy":16,
+    "tchunk": 1,
+    "grid": {
+      "xsize": 25600,
+      "ysize": 25600,
+      "itot": 512,
+      "jtot": 512,
+      "kmax": 128,
+      "dz0": 20,
+      "alpha": 0.012
+    },
+    "_tskin": { 
+      "ERA5_path": "/projects/0/nwo21036/ERA5_soil/"
+    },
+    "data_path": "/projects/0/nwo21036/spatial_data/",
+    "LSM":{
+      "ERA5_path": "/projects/0/nwo21036/ERA5_soil/",
+      "spatial_data_path": "/projects/0/nwo21036/spatial_data/",
+      "lsm_kind" : "TNO"
+    },
+    "Nc_0": {
+      "Nc_cst": 130e6,
+      "z_cst": 4e3,
+      "z_e":  2e3
+    },
+    "synturb": {
+      "dx": 25600,
+      "dy": 25600
+      },
+    "filter": {
+      "time_start": "2022-08-23T00:00", 
+      "time_end": "2022-05-23T02:00",
+      "sigma": 20e3
+    }
+  }
+}

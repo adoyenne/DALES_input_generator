@@ -1,0 +1,59 @@
+{
+    "author": "",
+    "coarse": {
+        "source": "harmonie_rd",
+        "inpath": "",
+        "outpath": "",
+        "hybrid_file":"",
+        "start": "",
+        "time0": "",
+        "end": "",
+        "iexpnr": 1,
+        "lat_sw": 51.5,
+        "lon_sw": 3.0,
+        "xlat": 51.972,
+        "xlon": 4.481,
+        "e12": 0.01,
+        "nsv": 10,
+        "nprocx": 32,
+        "nprocy": 16,
+        "tchunk": 1,
+        "grid": {
+            "xsize": 204800,
+            "ysize": 102400,
+            "itot": 1024,
+            "jtot": 512,
+            "kmax": 128,
+            "dz0": 20,
+            "alpha": 0.012,
+            "x_offset": 90700.0,
+            "y_offset": 33500.0,
+            "xsize_fine": 25600,
+            "ysize_fine": 25600
+        },
+        "_tskin": {
+            "ERA5_path": "/.../ERA5_soil/"
+        },
+        "data_path": "/.../spatial_data/",
+        "LSM": {
+            "ERA5_path": "/.../ERA5_soil/",
+            "spatial_data_path": "/.../spatial_data/",
+            "lsm_kind": "TNO",
+            "lwrite_ags": false
+        },
+        "Nc_0": {
+            "Nc_cst": 130000000.0,
+            "z_cst": 4000.0,
+            "z_e": 2000.0
+        },
+        "synturb": {
+            "dx": 204800,
+            "dy": 102400
+        },
+        "filter": {
+            "time_start": "",
+            "time_end": "",
+            "sigma": 20000.0
+        }
+    }
+}

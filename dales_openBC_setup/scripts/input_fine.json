@@ -1,0 +1,56 @@
+{
+    "author": "",
+    "fine": {
+        "inpath": "",
+        "outpath": "",
+        "start": "",
+        "time0": "",
+        "end": "",
+        "nsv": 10,
+        "iexpnr": 1,
+        "xlat": 51.937,
+        "xlon": 4.482,
+        "x_fine": 79960.0,
+        "y_fine": 426325.0,
+        "x_offset": 90700.0,
+        "y_offset": 33500.0,
+        "dx_coarse": 200.0,
+        "dy_coarse": 200.0,
+        "nprocx": 16,
+        "nprocy": 16,
+        "tchunk": 1,
+        "grid": {
+            "xsize": 25600,
+            "ysize": 25600,
+            "itot": 512,
+            "jtot": 512,
+            "kmax": 128,
+            "dz0": 20,
+            "alpha": 0.012
+        },
+        "_tskin": {
+            "ERA5_path": "/.../ERA5_soil/"
+        },
+        "data_path": "/.../spatial_data/",
+        "LSM": {
+            "ERA5_path": "/.../ERA5_soil/",
+            "spatial_data_path": "/.../spatial_data/",
+            "lsm_kind": "TNO",
+            "lwrite_ags": false
+        },
+        "Nc_0": {
+            "Nc_cst": 130000000.0,
+            "z_cst": 4000.0,
+            "z_e": 2000.0
+        },
+        "synturb": {
+            "dx": 25600,
+            "dy": 25600
+        },
+        "filter": {
+            "time_start": "",
+            "time_end": "",
+            "sigma": 20000.0
+        }
+    }
+}

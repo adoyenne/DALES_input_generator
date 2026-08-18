@@ -75,7 +75,7 @@ class Setup:
         # Instead of re-opening files, reuse `ds`
         self.datasets = {name: ds for name in self.tracer_names}
         
-        if self.input_type == 'LE':
+        if self.input_type == 'LE' or self.input_type == 'IFS':
             self.datasets['altitude'] = ds['altitude']
         elif self.input_type == 'CAMS':
             self.datasets['altitude'] = ds['z']
@@ -424,7 +424,7 @@ if __name__ == "__main__":
     if setup.input_type == 'LE':
         altitude_xr = setup.datasets["altitude"] #extract altitudes from LE dataset
         altitude = altitude_xr[0, :, :, :].values
-    elif setup.input_type == 'CAMS':
+    elif setup.input_type == 'CAMS' or setup.input_type == 'IFS':
         altitude_xr = setup.datasets["altitude"] #extract altitudes from CAMS dataset
         altitude = altitude_xr[0, :, :, :].values
         if altitude[0, :, :].mean() > altitude[-1, :, :].mean():
@@ -478,6 +478,9 @@ if __name__ == "__main__":
                 # Extract the tracer data at the current time index
                 time_index = get_time_index(var_ds, date_run, t)
                 raw_data = var_ds[time_index, :, :, :].values
+                
+                if inverse:
+                    raw_data = raw_data[::-1, :, :].copy()
 
                 print(f"Indices for t={t}: index={time_index}")
             
@@ -487,17 +490,14 @@ if __name__ == "__main__":
                 elif tracer_name in ['c2h6', 'pm25', 'bc']: #they are in kg m-3 in LE..
                     tracer_data = raw_data  # kg/m3
                 else:
-                    tracer_data = raw_data # ppb      
-                
-                if inverse:
-                    raw_data = raw_data[::-1, :, :].copy()
+                    tracer_data = raw_data # ppb
                 
                 print(f"Vertical interpolation to DALES grid")
         
                 # Perform the vertical interpolation first
                 if setup.input_type == 'LE':
                     interpolated_vert = ip.interpolate_vert_mass_conserving(tracer_data, altitude, setup.target_grid.zt)
-                elif setup.input_type == 'CAMS':
+                elif setup.input_type == 'CAMS' or setup.input_type == 'IFS':
                     interpolated_vert = ip.interpolate_vert_mass_conserving_CAMS(tracer_data, altitude, setup.target_grid.zt)
                              
                 #interpolated_vert is (lat, lon, z)

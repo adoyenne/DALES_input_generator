@@ -1,6 +1,7 @@
 from datetime import datetime
 import numpy as np
-def profiles(input,grid,initfields,data):
+
+def profiles(input,grid,initfields,data=None):
   time = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S')
   # Open prof.inp.xxx
   prof = open(f"{input['outpath']}prof.inp.{input['iexpnr']:03}", 'w')
@@ -30,7 +31,7 @@ def profiles(input,grid,initfields,data):
   lscale.close()
   scalar.close()
   # Open exnr.inp.xxx (if used)
-  if('exnr' in data):
+  if data is not None and 'exnr' in data:
     exnr = open(f"{input['outpath']}exnr.inp.{input['iexpnr']:03}", 'w')
     exnr.write(f"# Exnr function used, thls = {data['exnr'].attrs['thls']}, ps = {data['exnr'].attrs['ps']}, created by {input['author']} at {time}\n")
     for i in range(data.sizes['z']):

@@ -194,6 +194,61 @@ def postprocess_metadata_and_encoding(ds, input):
     }
 
     return ds, encoding
+    
+def interpolate_vertical(arr, grid, var_name=None):
+    """
+    Interpolate a DALES field from its source vertical grid
+    onto the target fine-grid vertical coordinates.
+
+    Scalars/u/v: zt
+    w: zm
+
+    Extrapolation is allowed because the fine grid may extend
+    below the lowest coarse level.
+    """
+
+    if 'zt' in arr.dims:
+        zdim = 'zt'
+        target_z = np.asarray(grid.zt)
+
+    elif 'zm' in arr.dims:
+        zdim = 'zm'
+        target_z = np.asarray(grid.zm)
+
+    else:
+        return arr
+
+    source_z = np.asarray(arr[zdim].values)
+
+    # Check monotonicity
+    if not np.all(np.diff(source_z) > 0):
+        raise ValueError(
+            f"{var_name}: {zdim} is not strictly increasing"
+        )
+
+    if not np.all(np.diff(target_z) > 0):
+        raise ValueError(
+            f"Target grid {zdim} is not strictly increasing"
+        )
+
+    # Check where extrapolation is required
+    n_below = np.sum(target_z < source_z.min())
+    n_above = np.sum(target_z > source_z.max())
+
+    if n_below > 0 or n_above > 0:
+        print(
+            f"{var_name}: vertical extrapolation: "
+            f"{n_below} below, {n_above} above"
+        )
+
+    result = arr.interp(
+        {zdim: target_z},
+        kwargs={"fill_value": "extrapolate"}
+    )
+
+    return result.assign_coords(
+        {zdim: target_z}
+    )
 
 def boundary_fields(input,grid,data):
   data = data.drop(['lat','lon'])
@@ -317,32 +372,31 @@ def boundary_fields_fine(input,grid):
          
         # West boundary
         if  var == 'u0':
-            boundary_fields_west0['uwest'] = ds[var].isel(xm=ix_west,drop=True).interp(yt=grid.yt+input['y_offset']).rename('uwest').expand_dims({'time':[pd.Timestamp(input['time0'])]},axis=0).assign_coords(yt=grid.yt,zt=grid.zt)
-            boundary_fields_east0['ueast'] = ds[var].isel(xm=ix_east,drop=True).interp(yt=grid.yt+input['y_offset']).rename('ueast').expand_dims({'time':[pd.Timestamp(input['time0'])]},axis=0).assign_coords(yt=grid.yt,zt=grid.zt)
-            boundary_fields_south0['usouth'] = ds[var].isel(yt=iy_south,drop=True).interp(xm=grid.xm+input['x_offset']).rename('usouth').expand_dims({'time':[pd.Timestamp(input['time0'])]},axis=0).assign_coords(xm=grid.xm,zt=grid.zt)
-            boundary_fields_north0['unorth'] = ds[var].isel(yt=iy_north,drop=True).interp(xm=grid.xm+input['x_offset']).rename('unorth').expand_dims({'time':[pd.Timestamp(input['time0'])]},axis=0).assign_coords(xm=grid.xm,zt=grid.zt)
-            boundary_fields_top0['utop'] = ds[var].isel(zt=grid.kmax-1,drop=True).interp(xm=grid.xm+input['x_offset'],yt=grid.yt+input['y_offset']).rename('utop').expand_dims({'time':[pd.Timestamp(input['time0'])]},axis=0).assign_coords(xm=grid.xm,yt=grid.yt)
-
+            boundary_fields_west0['uwest'] = ds[var].isel(xm=ix_west,drop=True).interp(yt=grid.yt+input['y_offset'], zt=grid.zt, kwargs={"fill_value": "extrapolate"}).rename('uwest').expand_dims({'time':[pd.Timestamp(input['time0'])]},axis=0).assign_coords(yt=grid.yt,zt=grid.zt)
+            boundary_fields_east0['ueast'] = ds[var].isel(xm=ix_east,drop=True).interp(yt=grid.yt+input['y_offset'], zt=grid.zt, kwargs={"fill_value": "extrapolate"}).rename('ueast').expand_dims({'time':[pd.Timestamp(input['time0'])]},axis=0).assign_coords(yt=grid.yt,zt=grid.zt)
+            boundary_fields_south0['usouth'] = ds[var].isel(yt=iy_south,drop=True).interp(xm=grid.xm+input['x_offset'], zt=grid.zt, kwargs={"fill_value": "extrapolate"}).rename('usouth').expand_dims({'time':[pd.Timestamp(input['time0'])]},axis=0).assign_coords(xm=grid.xm,zt=grid.zt)
+            boundary_fields_north0['unorth'] = ds[var].isel(yt=iy_north,drop=True).interp(xm=grid.xm+input['x_offset'], zt=grid.zt, kwargs={"fill_value": "extrapolate"}).rename('unorth').expand_dims({'time':[pd.Timestamp(input['time0'])]},axis=0).assign_coords(xm=grid.xm,zt=grid.zt)
+            boundary_fields_top0['utop'] = ds[var].interp(zt=grid.zt[-1], xm=grid.xm+input['x_offset'],yt=grid.yt+input['y_offset'], kwargs={"fill_value": "extrapolate"}).rename('utop').expand_dims({'time':[pd.Timestamp(input['time0'])]},axis=0).assign_coords(xm=grid.xm,yt=grid.yt)
         elif var == 'v0':
-            boundary_fields_west0['vwest'] = ds[var].isel(xt=ix_west,drop=True).interp(ym=grid.ym+input['y_offset']).rename('vwest').expand_dims({'time':[pd.Timestamp(input['time0'])]},axis=0).assign_coords(ym=grid.ym,zt=grid.zt)
-            boundary_fields_east0['veast'] = ds[var].isel(xt=ix_east,drop=True).interp(ym=grid.ym+input['y_offset']).rename('veast').expand_dims({'time':[pd.Timestamp(input['time0'])]},axis=0).assign_coords(ym=grid.ym,zt=grid.zt)
-            boundary_fields_south0['vsouth'] = ds[var].isel(ym=iy_south,drop=True).interp(xt=grid.xt+input['x_offset']).rename('vsouth').expand_dims({'time':[pd.Timestamp(input['time0'])]},axis=0).assign_coords(xt=grid.xt,zt=grid.zt)
-            boundary_fields_north0['vnorth'] = ds[var].isel(ym=iy_north,drop=True).interp(xt=grid.xt+input['x_offset']).rename('vnorth').expand_dims({'time':[pd.Timestamp(input['time0'])]},axis=0).assign_coords(xt=grid.xt,zt=grid.zt)
-            boundary_fields_top0['vtop'] = ds[var].isel(zt=grid.kmax-1,drop=True).interp(xt=grid.xt+input['x_offset'],ym=grid.ym+input['y_offset']).rename('vtop').expand_dims({'time':[pd.Timestamp(input['time0'])]},axis=0).assign_coords(xt=grid.xt,ym=grid.ym)
+            boundary_fields_west0['vwest'] = ds[var].isel(xt=ix_west,drop=True).interp(ym=grid.ym+input['y_offset'], zt=grid.zt, kwargs={"fill_value": "extrapolate"}).rename('vwest').expand_dims({'time':[pd.Timestamp(input['time0'])]},axis=0).assign_coords(ym=grid.ym,zt=grid.zt)
+            boundary_fields_east0['veast'] = ds[var].isel(xt=ix_east,drop=True).interp(ym=grid.ym+input['y_offset'], zt=grid.zt, kwargs={"fill_value": "extrapolate"}).rename('veast').expand_dims({'time':[pd.Timestamp(input['time0'])]},axis=0).assign_coords(ym=grid.ym,zt=grid.zt)
+            boundary_fields_south0['vsouth'] = ds[var].isel(ym=iy_south,drop=True).interp(xt=grid.xt+input['x_offset'], zt=grid.zt, kwargs={"fill_value": "extrapolate"}).rename('vsouth').expand_dims({'time':[pd.Timestamp(input['time0'])]},axis=0).assign_coords(xt=grid.xt,zt=grid.zt)
+            boundary_fields_north0['vnorth'] = ds[var].isel(ym=iy_north,drop=True).interp(xt=grid.xt+input['x_offset'], zt=grid.zt, kwargs={"fill_value": "extrapolate"}).rename('vnorth').expand_dims({'time':[pd.Timestamp(input['time0'])]},axis=0).assign_coords(xt=grid.xt,zt=grid.zt)
+            boundary_fields_top0['vtop'] = ds[var].interp(zt=grid.zt[-1],xt=grid.xt+input['x_offset'],ym=grid.ym+input['y_offset'], kwargs={"fill_value": "extrapolate"}).rename('vtop').expand_dims({'time':[pd.Timestamp(input['time0'])]},axis=0).assign_coords(xt=grid.xt,ym=grid.ym)
         elif var == 'w0':
             boundary_fields_west0['wwest']  = ds[var].isel(xt=ix_west,drop=True).interp(yt=grid.yt+input['y_offset'],zm=grid.zm,kwargs={"fill_value": "extrapolate"}).rename('wwest').expand_dims({'time':[pd.Timestamp(input['time0'])]},axis=0).assign_coords(yt=grid.yt,zm=grid.zm)
             boundary_fields_east0['weast'] = ds[var].isel(xt=ix_east,drop=True).interp(yt=grid.yt+input['y_offset'],zm=grid.zm,kwargs={"fill_value": "extrapolate"}).rename('weast').expand_dims({'time':[pd.Timestamp(input['time0'])]},axis=0).assign_coords(yt=grid.yt,zm=grid.zm)
             boundary_fields_south0['wsouth'] = ds[var].isel(yt=iy_south,drop=True).interp(xt=grid.xt+input['x_offset'],zm=grid.zm,kwargs={"fill_value": "extrapolate"}).rename('wsouth').expand_dims({'time':[pd.Timestamp(input['time0'])]},axis=0).assign_coords(xt=grid.xt,zm=grid.zm)
             boundary_fields_north0['wnorth'] = ds[var].isel(yt=iy_north,drop=True).interp(xt=grid.xt+input['x_offset'],zm=grid.zm,kwargs={"fill_value": "extrapolate"}).rename('wnorth').expand_dims({'time':[pd.Timestamp(input['time0'])]},axis=0).assign_coords(xt=grid.xt,zm=grid.zm)
-            boundary_fields_top0['wtop'] = ds[var].isel(zm=grid.kmax,drop=True).interp(xt=grid.xt+input['x_offset'],yt=grid.yt+input['y_offset']).rename('wtop').expand_dims({'time':[pd.Timestamp(input['time0'])]},axis=0).assign_coords(xt=grid.xt,yt=grid.yt)
+            boundary_fields_top0['wtop'] = ds[var].interp(zm=grid.zm[-1], xt=grid.xt+input['x_offset'],yt=grid.yt+input['y_offset'], kwargs={"fill_value": "extrapolate"}).rename('wtop').expand_dims({'time':[pd.Timestamp(input['time0'])]},axis=0).assign_coords(xt=grid.xt,yt=grid.yt)
         
         else:
             base = var[:-1] if var.endswith("0") else var
-            boundary_fields_west0[f'{base}west']=ds[var].isel(xt=ix_west,drop=True).interp(yt=grid.yt+input['y_offset']).rename(f'{base}west').expand_dims({'time':[pd.Timestamp(input['time0'])]},axis=0).assign_coords(yt=grid.yt,zt=grid.zt)
-            boundary_fields_east0[f'{base}east']=ds[var].isel(xt=ix_east,drop=True).interp(yt=grid.yt+input['y_offset']).rename(f'{base}east').expand_dims({'time':[pd.Timestamp(input['time0'])]},axis=0).assign_coords(yt=grid.yt,zt=grid.zt)
-            boundary_fields_south0[f'{base}south']=ds[var].isel(yt=iy_south,drop=True).interp(xt=grid.xt+input['x_offset']).rename(f'{base}south').expand_dims({'time':[pd.Timestamp(input['time0'])]},axis=0).assign_coords(xt=grid.xt,zt=grid.zt)
-            boundary_fields_north0[f'{base}north']=ds[var].isel(yt=iy_north,drop=True).interp(xt=grid.xt+input['x_offset']).rename(f'{base}north').expand_dims({'time':[pd.Timestamp(input['time0'])]},axis=0).assign_coords(xt=grid.xt,zt=grid.zt)
-            boundary_fields_top0[f'{base}top']=ds[var].isel(zt=grid.kmax-1,drop=True).interp(xt=grid.xt+input['x_offset'],yt=grid.yt+input['y_offset']).rename(f'{base}top').expand_dims({'time':[pd.Timestamp(input['time0'])]},axis=0).assign_coords(xt=grid.xt,yt=grid.yt)
+            boundary_fields_west0[f'{base}west']=ds[var].isel(xt=ix_west,drop=True).interp(yt=grid.yt+input['y_offset'], zt=grid.zt, kwargs={"fill_value": "extrapolate"}).rename(f'{base}west').expand_dims({'time':[pd.Timestamp(input['time0'])]},axis=0).assign_coords(yt=grid.yt,zt=grid.zt)
+            boundary_fields_east0[f'{base}east']=ds[var].isel(xt=ix_east,drop=True).interp(yt=grid.yt+input['y_offset'], zt=grid.zt, kwargs={"fill_value": "extrapolate"}).rename(f'{base}east').expand_dims({'time':[pd.Timestamp(input['time0'])]},axis=0).assign_coords(yt=grid.yt,zt=grid.zt)
+            boundary_fields_south0[f'{base}south']=ds[var].isel(yt=iy_south,drop=True).interp(xt=grid.xt+input['x_offset'], zt=grid.zt, kwargs={"fill_value": "extrapolate"}).rename(f'{base}south').expand_dims({'time':[pd.Timestamp(input['time0'])]},axis=0).assign_coords(xt=grid.xt,zt=grid.zt)
+            boundary_fields_north0[f'{base}north']=ds[var].isel(yt=iy_north,drop=True).interp(xt=grid.xt+input['x_offset'], zt=grid.zt, kwargs={"fill_value": "extrapolate"}).rename(f'{base}north').expand_dims({'time':[pd.Timestamp(input['time0'])]},axis=0).assign_coords(xt=grid.xt,zt=grid.zt)
+            boundary_fields_top0[f'{base}top']=ds[var].interp(zt=grid.zt[-1], xt=grid.xt+input['x_offset'],yt=grid.yt+input['y_offset'], kwargs={"fill_value": "extrapolate"}).rename(f'{base}top').expand_dims({'time':[pd.Timestamp(input['time0'])]},axis=0).assign_coords(xt=grid.xt,yt=grid.yt)
         
   for name, da in boundary_fields_west0.items():
     print(f"{name}: {da.dims}, shape={da.shape}")
@@ -446,7 +500,7 @@ def boundary_fields_fine(input,grid):
     # Determine cross-section folder (e.g. crossyz, crossxz, crossxy)
     level = f"{binfo['ix']:04d}" if bname != 'top' else f"{grid.kmax:04d}"
     #folder = os.path.join(input['inpath'], 'crossections', binfo['file'], level)
-    folder = os.path.join(input['inpath'], binfo['file'], level)
+    folder = os.path.join(input['inpath'], 'crossections', binfo['file'], level)
     if not os.path.isdir(folder):
         print(f"⚠️  Folder not found: {folder}")
         continue
@@ -600,24 +654,78 @@ def boundary_fields_fine(input,grid):
                     name=arr.name,
                 )
 
-        else:  
-                   
-            # Always 3D arrays: (time, z, horizontal)
-            dim_h = [d for d in horiz_dims if d in arr.dims][0]  # horizontal dim
+        else:
+            # =========================================================
+            # 3-D boundary field:
+            #     (time, zt/zm, horizontal)
+            #
+            # Step 1: vertical interpolation
+            #         coarse zt/zm -> fine grid.zt/grid.zm
+            #
+            # Step 2: horizontal interpolation
+            #         coarse horizontal -> fine horizontal
+            # =========================================================
+
+            # ---------------------------------------------------------
+            # 1. Vertical interpolation
+            # ---------------------------------------------------------
+            #
+            # u, v, scalars: zt
+            # w:            zm
+            #
+            # This also handles bottom extrapolation because the fine
+            # grid may extend below the lowest coarse vertical level.
+            #
+            arr = interpolate_vertical(
+                arr,
+                grid,
+                var_name=var_name
+            )
+
+            print(
+                f"{var_name}: after vertical interpolation: "
+                f"dims={arr.dims}, shape={arr.shape}"
+            )
+
+            # ---------------------------------------------------------
+            # 2. Determine horizontal coordinate
+            # ---------------------------------------------------------
+            dim_h = [d for d in horiz_dims if d in arr.dims][0]
+
             src_x = np.asarray(arr[dim_h].values)
-            phys_tgt_x = np.asarray(getattr(grid, dim_h) + (input['x_offset'] if dim_h in ['xt','xm'] else input['y_offset']))
-            tgt_x = np.asarray(getattr(grid, dim_h))
 
-            # Reorder array so horizontal dim is last (time, z, horizontal)
-            other_dims = [d for d in arr.dims if d != dim_h]
-            arr_reordered = arr.transpose(*other_dims, dim_h)
+            if dim_h in ['xt', 'xm']:
+                offset = input['x_offset']
+            else:
+                offset = input['y_offset']
 
-            # Interpolate along last axis
-            
-            
-            #arr_interp_data = np.empty(arr_reordered.shape[:-1] + (len(tgt_x),), dtype=arr.dtype)
-            #for index in np.ndindex(arr_reordered.shape[:-1]):
-                #arr_interp_data[index] = interp1d_numba(src_x, np.asarray(arr_reordered[index]), phys_tgt_x)
+            phys_tgt_x = np.asarray(
+                getattr(grid, dim_h) + offset
+            )
+
+            tgt_x = np.asarray(
+                getattr(grid, dim_h)
+            )
+
+            # ---------------------------------------------------------
+            # 3. Reorder array so horizontal dimension is last
+            #
+            # Result:
+            #     (time, z, horizontal)
+            # ---------------------------------------------------------
+            other_dims = [
+                d for d in arr.dims
+                if d != dim_h
+            ]        
+
+            arr_reordered = arr.transpose(
+                *other_dims,
+                dim_h
+            )
+
+            # ---------------------------------------------------------
+            # 4. Horizontal interpolation
+            # ---------------------------------------------------------
             f = interp1d(
                 src_x,
                 arr_reordered.data,
@@ -625,49 +733,44 @@ def boundary_fields_fine(input,grid):
                 bounds_error=False,
                 fill_value="extrapolate"
             )
-            
+
             arr_interp_data = f(phys_tgt_x)
-            # Build DataArray
+
+            # ---------------------------------------------------------
+            # 5. Build output DataArray
+            # ---------------------------------------------------------
             all_dims = other_dims + [dim_h]
-            arr_interp = xr.DataArray(arr_interp_data, dims=all_dims, attrs=arr.attrs, name=arr.name)
 
-            # zm extrapolation if needed
-            if 'zm' in arr_interp.dims and var_name.startswith('w'):
-                nz_data = arr_interp.sizes['zm']
-                nz_target = len(grid.zm)
-                if nz_data == nz_target - 1:
-                    # Last level as full slice with dims intact
-                    last_level = arr_interp.isel(zm=-1)
-                    # Expand along zm dimension (axis) to create top level
-                    top_level = last_level.expand_dims('zm', axis=arr_interp.dims.index('zm'))
-                    top_level = top_level.copy()  # now it's writable
-                    # Fill with zeros
-                    top_level.data[:] = 0.0
-                    # Concatenate along zm
-                    arr_interp = xr.concat([arr_interp, top_level], dim='zm')
-                    # Assign final zm coordinates
-                    arr_interp = arr_interp.assign_coords(zm=grid.zm)
-       
-                elif nz_data != nz_target:
-                    raise ValueError(f"{var_name}: zm mismatch ({nz_data} vs {nz_target})")
-
-                
             coords = {}
-            for d in arr_interp.dims:
-              if d in horiz_dims:
-                # target horizontal grid
-                coords[d] = getattr(grid, d)
-              elif d == 'zt' and 'zt' in arr_interp.dims:
-                    coords[d] = grid.zt
-              elif d == 'zm' and 'zm' in arr_interp.dims:
-                    coords[d] = grid.zm
-              elif d == 'time' and 'time' in arr_interp.dims:
-                    coords[d] = arr['time']  # only keep original time
-              else:
-                    # keep other dims (e.g., species)
-                    coords[d] = arr_interp[d]
 
-            arr_interp = arr_interp.assign_coords(coords)
+            for d in all_dims:
+
+                if d == dim_h:
+                    # Fine horizontal coordinate
+                    coords[d] = tgt_x
+
+                elif d == 'zt':
+                    # Fine scalar/u/v vertical coordinate
+                    coords[d] = grid.zt
+
+                elif d == 'zm':
+                    # Fine w vertical coordinate
+                    coords[d] = grid.zm
+
+                elif d == 'time':
+                    # Keep original time coordinate
+                    coords[d] = arr['time']
+
+                elif d in arr.coords:
+                    coords[d] = arr.coords[d]
+
+            arr_interp = xr.DataArray(
+                arr_interp_data,
+                dims=all_dims,
+                coords=coords,
+                attrs=arr.attrs,
+                name=arr.name
+            )
             
         # Rename variable
         if var_name.endswith(('xy', 'yz', 'xz')):
@@ -751,17 +854,5 @@ def boundary_fields_fine(input,grid):
         
 
     print(f"✅ Saved open boundaries to {outfn}")
-        
-  
-    # ============================================================
-    # BUILD FINAL DATASET
-    # ============================================================
-
-     #ds = xr.Dataset(boundary_output)
-     #ds = postprocess_time_and_coords(ds, grid, input)  
-     #ds, encoding = postprocess_metadata_and_encoding(ds, input)
-     #ds.to_netcdf(outfn, mode="a", encoding=encoding)
-    
-   #print(f"✅ Saved open boundaries to {outfn}")
 
   return outfn

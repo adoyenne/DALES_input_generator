@@ -206,36 +206,98 @@ def interpolate_kernel_2d_unaligned(field_LES, field_LS, i0, j0, ifac, jfac):
                 )
                 
                 
-def ensure_monotonic(arr, name, flip=False):
-    """Ensure that the coordinate array is monotonically increasing."""
-    if np.all(np.diff(arr) > 0):
-        return arr
-    else:
-        print(f"Warning: {name} is not increasing, flipping the order.")
-        arr = arr[::-1]
-    
-    # Optionally flip based on the flip flag
-    if flip:
-        arr = arr[::-1]
-    
-    return arr
+def ensure_monotonic(arr, name):
+    """
+    Return monotonically increasing coordinate and whether it was flipped.
+    """
 
-class GridInterpolatorLE:
-    def __init__(self, x_LS, y_LS, z_LS, x, y, z, x_sw, y_sw):
-        self.x_LS = ensure_monotonic(x_LS, "x_LS")
-        self.y_LS = ensure_monotonic(y_LS, "y_LS")
+    arr = np.asarray(arr)
+
+    if np.all(np.diff(arr) > 0):
+        return arr, False
+
+    elif np.all(np.diff(arr) < 0):
+        print(f"WARNING: {name} is decreasing -> flipping coordinate")
+        return arr[::-1].copy(), True
+
+    else:
+        raise ValueError(
+            f"{name} is not monotonic."
+        )
+     
         
+class GridInterpolatorLE:
+
+    def __init__(
+        self,
+        x_LS,
+        y_LS,
+        z_LS,
+        x,
+        y,
+        z,
+        x_sw,
+        y_sw
+    ):
+
+        self.x_LS, self.flip_x = ensure_monotonic(
+            x_LS,
+            "x_LS"
+        )
+
+        self.y_LS, self.flip_y = ensure_monotonic(
+            y_LS,
+            "y_LS"
+        )
+
         self.i0 = np.zeros_like(x, dtype=int)
         self.ifac = np.zeros_like(x, dtype=float)
+
         self.j0 = np.zeros_like(y, dtype=int)
         self.jfac = np.zeros_like(y, dtype=float)
-        
+
         calc_horz_interpolation_factors_unaligned(
-            self.i0, self.j0, self.ifac, self.jfac, x, y, self.x_LS, self.y_LS, x_sw, y_sw
+            self.i0,
+            self.j0,
+            self.ifac,
+            self.jfac,
+            x,
+            y,
+            self.x_LS,
+            self.y_LS,
+            x_sw,
+            y_sw
         )
 
     def interpolate_2d(self, field_LS):
-        field_LES = np.zeros((self.i0.shape[0], self.j0.shape[1], field_LS.shape[2]), dtype=field_LS.dtype)
-        interpolate_kernel_2d_unaligned(field_LES, field_LS, self.i0, self.j0, self.ifac, self.jfac)
+
+        field_LS = field_LS.copy()
+
+        # field_LS = (lon, lat, z)
+
+        if self.flip_x:
+            field_LS = field_LS[::-1, :, :]
+
+        if self.flip_y:
+            field_LS = field_LS[:, ::-1, :]
+
+        field_LES = np.zeros(
+            (
+                self.i0.shape[0],
+                self.j0.shape[1],
+                field_LS.shape[2]
+            ),
+            dtype=field_LS.dtype
+        )
+
+        interpolate_kernel_2d_unaligned(
+            field_LES,
+            field_LS,
+            self.i0,
+            self.j0,
+            self.ifac,
+            self.jfac
+        )
+
         return field_LES
 

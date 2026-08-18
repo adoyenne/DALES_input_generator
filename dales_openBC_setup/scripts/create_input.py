@@ -247,6 +247,9 @@ if('fine' in input):
   if(input_fine['start']==input_fine['time0']): # Not required for warmstarts
     initfields_fine = initial_fields_fine(input_fine,grid)
     print('finished initial fields')
+    #%% Create profiles > prof.inp.xxx, lscale.inp.xxx scalar.inp.xxx
+    profiles(input_fine,grid,initfields_fine)
+    print('finished profiles')
   #%% Create boundary input > openboundaries.inp.xxx.nc
   openboundaries_fine = boundary_fields_fine(input_fine,grid)
   print('finished boundary fields')
@@ -293,11 +296,7 @@ if('fine' in input):
   
   files_to_copy = [
         "backrad.inp.001.nc",
-        "lscale.inp.001",
         "exnr.inp.001",
-        "nc0.inp.001",
-        "scalar.inp.001",
-        "prof.inp.001",
         "tracerdata.inp"
     ]
 

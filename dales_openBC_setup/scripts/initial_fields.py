@@ -66,7 +66,9 @@ def initial_fields_fine(input,grid):
                                 ym=grid.ym+input['y_offset'],
                                 zt=grid.zt,
                                 zm=grid.zm,
-                                assume_sorted=True)
+                                assume_sorted=True,
+                                kwargs={"fill_value": "extrapolate"})
+                                
     initfields_fine = initfields_fine.assign_coords({'xt': grid.xt, 'xm': grid.xm, 'yt': grid.yt, 'ym': grid.ym})
 
     # Adjust transform

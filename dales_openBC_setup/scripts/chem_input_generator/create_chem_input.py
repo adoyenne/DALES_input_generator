@@ -20,7 +20,7 @@ from scipy.interpolate import interp1d
 import interpolate_chem as ip
 from GridDales import GridDales
 from dateutil import parser
-from config import *
+import config as config
 
 #TO-DO: add setup parameters to the main json script to read from there..
 class Setup:
@@ -33,8 +33,8 @@ class Setup:
         
         # File paths
         self.input_type = config.input_type
-        self.input_dir = config.input_dir
-        self.input_file = config.input_dir
+        self.input_dir = config.input_dataset_loc
+        self.input_file = config.input_dataset
         self.input_coarse = input_data['coarse']
         self.output_dir = self.input_coarse['outpath']
         self.iexpnr = f"{self.input_coarse['iexpnr']:03d}"

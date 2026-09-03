@@ -204,8 +204,8 @@ grs = {'lu_long':'Grassland',
       'lu_short':'grs', 
       'lu_ids': np.array([10]),  
       'lveg':True, 'laqu':False}
-slb = {'lu_long':'Urban', 
-      'lu_short':'slb', 
+urb = {'lu_long':'Urban', 
+      'lu_short':'urb', 
       'lu_ids': np.array([20,22,23,24,25,29,30]),
       'lveg':False, 'laqu':False}
 
@@ -221,4 +221,4 @@ lu_types_depac = {'ara':ara,
                   'brn':brn,
                   'sem':sem,
                   'grs':grs,
-                  'slb':slb}
+                  'urb':urb}
